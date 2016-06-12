@@ -2,25 +2,13 @@
 <html><!--<![endif]--><head>
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <title>Cards — 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
+   <title>Carrément Vert</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="description" content="Free HTML5 Template by FREEHTML5.CO">
-   <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive">
-   <meta name="author" content="FREEHTML5.CO">
+   <meta name="description" content="Votre fleuriste au coeur du Quartier Montparnasse">
+   <meta name="keywords" content="Fleuriste, Paris, Fleuriste à Paris, Montparnasse, Fleurs, Flower shop, Florist">
+   <meta name="author" content="Carrément Vert">
 
-   <!-- 
-   //////////////////////////////////////////////////////
 
-   FREE HTML5 TEMPLATE 
-   DESIGNED & DEVELOPED by FREEHTML5.CO
-      
-   Website:       http://freehtml5.co/generator/
-   Email:         info@freehtml5.co
-   Twitter:       http://twitter.com/fh5co
-   Facebook:      https://www.facebook.com/fh5co
-
-   //////////////////////////////////////////////////////
-   -->
 
    <!-- Facebook and Twitter integration -->
    <meta property="og:title" content="">
@@ -35,10 +23,10 @@
 
    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
    <link rel="shortcut icon" href="favicon.ico">
-   
+
    <!-- Google Fonts -->
    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700" rel="stylesheet" type="text/css">
-   
+
    <!-- Animate.css -->
    <link rel="stylesheet" href="css/animate.css">
    <!-- Icomoon Icon Fonts-->
@@ -50,7 +38,7 @@
    <link rel="stylesheet" href="css/owl.theme.default.min.css">
    <!-- Bootstrap  -->
    <link rel="stylesheet" href="css/bootstrap.css">
-   
+
    <!-- Cards -->
    <link rel="stylesheet" href="css/cards.css">
 
@@ -60,28 +48,42 @@
    <!--[if lt IE 9]>
    <script src="js/respond.min.js"></script>
    <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+   <!-- Bootstrap core CSS -->
+   <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css" rel="stylesheet" media="screen">
+
+   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+   <!--[if lt IE 9]>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+   <![endif]-->
+
+   <style>
+
+   #map-container { height: 300px ; width: 400px }
+   </style>
    </head>
    <body class="fh5co-overflow">
 
    <div id="fh5co-page">
 
-   
+
 
       <nav class="fh5co-nav-style-1" role="navigation" data-offcanvass-position="fh5co-offcanvass-left">
          <div class="container">
             <div class="col-md-3 col-sm-3 col-xs-12 fh5co-logo">
                <a href="#" class="js-fh5co-mobile-toggle fh5co-nav-toggle"><i></i></a>
-               <a href="#">Cards</a>
+               <a href="#">Carrément Vert</a>
             </div>
             <div class="col-md-6 col-sm-6 text-center fh5co-link-wrap">
                <ul data-offcanvass="yes">
                   <li class="active"><a href="#">Tour</a></li>
-                  <li><a href="#">Explore</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
                </ul>
-            </div> 
+            </div>
             <div class="col-md-3 col-sm-3 text-right fh5co-link-wrap">
                <ul class="fh5co-special" data-offcanvass="yes">
                   <li><a href="#" class="call-to-action">Get Started</a></li>
@@ -102,23 +104,56 @@
                <div class="row">
                   <div class="col-md-push-6 col-md-6 full-height js-full-height" style="height: 918px;">
                      <div class="fh5co-cover-intro">
-                        <h1 class="cover-text-lead">Create Amazing Things</h1>
+                        <h1 class="cover-text-lead">Carrément Vert</h1>
                         <h2 class="cover-text-sublead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</h2>
                         <p><a href="#" class="btn btn-outline btn-lg">See Our Work</a></p>
                      </div>
                   </div>
                </div>
-            </div>   
+            </div>
          </div>
       </div><div class="fh5co-content-style-9">
          <div class="container">
             <div class="row">
                <div class="col-md-6 col-md-push-6">
-                  <p><img src="images/iphone_1.png" alt="Image" class="img-responsive"></p>
+                  <p>
+  <body>
+    <div id="map-container" class="col-md-6"></div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script>
+
+      function init_map() {
+		var var_location = new google.maps.LatLng(48.845556,2.319538);
+
+        var var_mapoptions = {
+          center: var_location,
+          zoom: 14
+        };
+
+		var var_marker = new google.maps.Marker({
+			position: var_location,
+			map: var_map,
+			title:"Carrément Vert"});
+
+        var var_map = new google.maps.Map(document.getElementById("map-container"),
+            var_mapoptions);
+
+		var_marker.setMap(var_map);
+
+      }
+
+      google.maps.event.addDomListener(window, 'load', init_map);
+
+    </script></p>
                </div>
                <div class="col-md-6 col-md-pull-6">
                   <h2 class="font-weight-normal">Useful and ready to use cards.</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla laboriosam cumque saepe aliquid aliquam doloremque quam, alias ipsam aperiam. Quidem voluptates porro suscipit nostrum ex, voluptatem voluptatibus vitae. Reprehenderit, dolorem!</p> 
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla laboriosam cumque saepe aliquid aliquam doloremque quam, alias ipsam aperiam. Quidem voluptates porro suscipit nostrum ex, voluptatem voluptatibus vitae. Reprehenderit, dolorem!</p>
                   <p class="btn-actions"><a href="#" class="btn btn-success"><i class="icon-apple"></i> Download on AppStore</a> <span class="or">or</span> <a href="#" class="lnk-success">Learn more <i class="lnk-icon-right icon-arrow-circle-o-right"></i></a></p>
                </div>
             </div>
@@ -155,7 +190,7 @@
                      </div>
                   </div>
                </div>
-               
+
                <div class="col-md-6">
                   <div class="fh5co-feature-item to-animate">
                      <div class="fh5co-feature-img" style="background-image: url(images/img_same_dimension_7.jpg);">
@@ -192,7 +227,7 @@
                      <li><a href="#">Blog</a></li>
                      <li><a href="#">Pricing</a></li>
                      <li><a href="#">Contact</a></li>
-                  </ul>       
+                  </ul>
                </div>
                <div class="col-md-6 col-md-pull-6">
                   <div class="fh5co-logo">Cards <span>© 2016. All Rights Reserved. Designed by <a href="#">FREEHTML5.co</a></span></div>
@@ -217,6 +252,6 @@
    <!-- Main -->
    <script src="js/main.js"></script>
 
-   
+
 
 </body></html>
