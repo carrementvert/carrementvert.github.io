@@ -36,6 +36,8 @@
    <!-- Owl Carousel -->
    <link rel="stylesheet" href="css/owl.carousel.min.css">
    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+   <!--Instagram -->
+   <link rel="stylesheet" href="css/pongstagr.am.css">
    <!-- Bootstrap  -->
    <link rel="stylesheet" href="css/bootstrap.css">
 
@@ -45,6 +47,7 @@
    <!-- Modernizr JS -->
    <script src="js/modernizr-2.6.2.min.js"></script>
    <!-- FOR IE9 below -->
+
    <!--[if lt IE 9]>
    <script src="js/respond.min.js"></script>
    <![endif]-->
@@ -61,8 +64,11 @@
 
    <style>
 
-   #map-container { height: 300px ; width: 400px }
+   #map-container { height: 300px ; width: 300px }
    </style>
+
+
+
    </head>
    <body class="fh5co-overflow">
 
@@ -78,7 +84,7 @@
             </div>
             <div class="col-md-6 col-sm-6 text-center fh5co-link-wrap">
                <ul data-offcanvass="yes">
-                  <li class="active"><a href="#">Tour</a></li>
+                  <li class="active"><a href="#"></a></li>
                   <li><a href="#"></a></li>
                   <li><a href="#"></a></li>
                   <li><a href="#"></a></li>
@@ -86,7 +92,8 @@
             </div>
             <div class="col-md-3 col-sm-3 text-right fh5co-link-wrap">
                <ul class="fh5co-special" data-offcanvass="yes">
-                  <li><a href="#" class="call-to-action">Get Started</a></li>
+                  <li><a href="https://www.facebook.com/carrementvertdeco/?fref=ts" class="call-to-action"><i class="icon-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/carrementvert/" class="call-to-action"><i class="icon-instagram"></i></a></li>
                </ul>
             </div>
          </div>
@@ -104,9 +111,14 @@
                <div class="row">
                   <div class="col-md-push-6 col-md-6 full-height js-full-height" style="height: 918px;">
                      <div class="fh5co-cover-intro">
-                        <h1 class="cover-text-lead">Carrément Vert</h1>
-                        <h2 class="cover-text-sublead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</h2>
-                        <p><a href="#" class="btn btn-outline btn-lg">See Our Work</a></p>
+                        <h1 class="cover-text-lead">Entrez, c'est tout vert !</h1>
+                        <h2 class="cover-text-sublead">
+                          <p>21 boulevard Montparnasse 75006 Paris</p>
+                          <p>Ouverture : du mardi au samedi  de 11h à 20h, dimanche de 10h à 14h</p>
+                          <p>Livraison de bouquets et compositions florales 7 jours sur 7 dans toute l’agglomération de Paris 6ème arrondissement et proche banlieu.</p>
+
+</h2>
+                        <p><a href="tel:0145448008" class="btn btn-outline btn-lg"><i class="icon-phone"></i> 01 45 44 80 08</a></p>
                      </div>
                   </div>
                </div>
@@ -132,7 +144,7 @@
 
         var var_mapoptions = {
           center: var_location,
-          zoom: 14
+          zoom: 16
         };
 
 		var var_marker = new google.maps.Marker({
@@ -150,15 +162,30 @@
       google.maps.event.addDomListener(window, 'load', init_map);
 
     </script></p>
+
+
+
                </div>
                <div class="col-md-6 col-md-pull-6">
                   <h2 class="font-weight-normal">Useful and ready to use cards.</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla laboriosam cumque saepe aliquid aliquam doloremque quam, alias ipsam aperiam. Quidem voluptates porro suscipit nostrum ex, voluptatem voluptatibus vitae. Reprehenderit, dolorem!</p>
-                  <p class="btn-actions"><a href="#" class="btn btn-success"><i class="icon-apple"></i> Download on AppStore</a> <span class="or">or</span> <a href="#" class="lnk-success">Learn more <i class="lnk-icon-right icon-arrow-circle-o-right"></i></a></p>
+                  <p class="btn-actions"><a href="tel:0145448008" class="btn btn-success"><i class="icon-phone"></i> 01 45 44 80 08</a> <span class="or">or</span> <a href="0647897493" class="lnk-success">En savoir plus <i class="lnk-icon-right icon-arrow-circle-o-right"></i></a></p>
                </div>
             </div>
          </div>
-      </div><div class="fh5co-features-style-4">
+
+      </div>
+
+
+              <div class="text-center fh5co-section-heading">
+        <h2 class="fh5co-heading">Actualités</h2>
+        <!-- SnapWidget -->
+
+        <div id="instafeed"></div>
+   </div>
+ </div>
+
+      <div class="fh5co-features-style-4">
          <div class="container">
             <div class="row p-b">
                <div class="col-md-6 col-md-offset-3 text-center fh5co-section-heading">
@@ -251,6 +278,21 @@
    <script src="js/jquery.magnific-popup.min.js"></script>
    <!-- Main -->
    <script src="js/main.js"></script>
+   <!-- Instafeed -->
+   <script type="text/javascript" src="instafeed.min.js"></script>
+   <script type="text/javascript">
+       var feed = new Instafeed({
+           get: 'user',
+           userId: '8512783',
+           accessToken: '8512783.43cd815.0e6884133ba64d329d8334176bf062b7',
+           limit: '10',
+           resolution: 'low_resolution',
+  template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes"> {{caption}}</div></a>'
+
+       });
+       feed.run();
+   </script>
+
 
 
 
