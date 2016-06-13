@@ -1393,11 +1393,11 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857;
-  color: #333333;
-  background-color: #fff;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: gray;
+  font-weight: 400;
 }
 
 input,
@@ -1436,6 +1436,14 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.img-responsive2 {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 11px;
+}
+
 
 .img-rounded {
   border-radius: 6px;
@@ -1964,6 +1972,7 @@ pre code {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+
 }
 .container-fluid:before, .container-fluid:after {
   content: " ";
